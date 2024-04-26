@@ -1,38 +1,134 @@
-.App {
-  text-align: center;
+.chart{
+  height: 600px;
+  width: 850px;
+  background-color: #FFFFFF;
+  border-radius: 1rem;
+  padding: 1rem;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.c-heading{
+  color: #3E5680;
+  font-weight: 600;
+  font-size: 1.2rem;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.charts{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  padding: 1rem;
+  gap: 2rem;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.logs{
+  background-color: #090F17;
+  font-size: 1.4rem;
+  font-weight: 450;
+  line-height: 3rem;
+  font-style: Fira Code;
+  margin-top: 2rem;
+}
+.timestamp{
+  color: #5E7BAA;
+}
+.msg{
+  color:#A8C3E8 ;
+}
+.lheading{
+  color: #82A0CE;
+  margin-left: 45%;
   display: flex;
-  flex-direction: column;
+}
+.spinner{
+  margin-right: 1rem;
+}
+.v-bar{
+  background-color: #60A5FA;
+  height: 1.5rem;
+  width: 0.6rem;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+.log{
+  display: flex;
+}
+.nav{
+  display: flex;
+  height: 5rem;
+  padding: 1rem;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.logo{
+  height: 3rem;
+  
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.page{
+  display: flex;
+  margin-left: 3rem;
+  align-items: center;
+  /* justify-content: space-between;
+  width: 13rem; */
+}
+.pg{
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  margin-right: 2rem;
+}
+.bar{
+  height: 0.3rem;
+  width: 7rem;
+  border-radius: 4rem;
+  background-color: #5501E1;
+  margin-top: 1rem;
+}
+.icon{
+  height: 1.2rem;
+  width: 1.2rem;
+  margin-right: 0.5rem;
+}
+.mtop{
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 1rem;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
+.mheading{
+  font-weight: 700;
+  font-size: 2.2rem;
+  margin-right: 1rem;
+  color: #010202;
+}
+.date{
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #1C2A42;
+}
+.metrics{
+  padding: 1rem;
+  background-color: rgb(250, 252, 255)
+}
+.m-box{
+  border: 1px solid #CEE0F8;
+  border-radius: 2rem;
+}
+.dropdown{
+  position: absolute;
+  right: 5rem;
+}
+.dropdown>select{
+  height: 3rem;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.interval{
+  color: #1C2A42;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  position: relative;
+  left: 75%;
 }

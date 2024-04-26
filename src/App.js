@@ -1,24 +1,37 @@
 import logo from './logo.svg';
 import './App.css';
+import Metrics from './components/Metrics';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Logs from './components/Logs';
+import Navbar from './components/Navbar';
+import { useEffect, useState } from 'react';
+
 
 function App() {
+  const [time,setTime]=useState('300000');
+  const [startT,setStartT]=useState(Date.now()-time);
+  const [endT,setEndT]=useState(Date.now())
+
+  
+
+  useEffect(()=>{
+    setStartT(Date.now()-time);
+    setEndT(Date.now());
+  },[time]);
+
+  const handleChildData = (data)=>{
+    setTime(data);
+  }
+  console.log(endT-startT);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+    <Navbar onChildData={handleChildData}/>
+    <Routes>
+      <Route path='/metrics' element={<Metrics startT={startT} endT={endT}/>}/>
+      <Route path='/logs' element={<Logs startT={startT} endT={endT}/>}/>
+    </Routes>
+    </BrowserRouter>
+    
   );
 }
 
